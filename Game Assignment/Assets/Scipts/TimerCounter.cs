@@ -6,12 +6,12 @@ using UnityEngine;
 public class TimerCounter : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timeText;
-    [SerializeField] private float timeLimit;
+    public static float timeLimit = 300;
 
     // Update is called once per frame
     void Update()
     {
-        if(timeLimit > 0)
+        if (timeLimit > 0)
         {
             timeLimit -= Time.deltaTime;
             if (timeLimit <= 4)
@@ -30,6 +30,8 @@ public class TimerCounter : MonoBehaviour
         int seconds = Mathf.FloorToInt(timeLimit % 60);
 
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        
+
     }
 }
+
+

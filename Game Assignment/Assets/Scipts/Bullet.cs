@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject hitEffect;
+    public static int bulletDamage = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,15 +18,20 @@ public class Bullet : MonoBehaviour
         Destroy(this.gameObject, 3f);
     }
 
+    public static void bullletDamageUp()
+    {
+        bulletDamage++;
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, 1f);
         Destroy(this.gameObject);
-       /// enemies to take damage
+        /// enemies to take damage
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyCompenent))
         {
-            enemyCompenent.TakeDamage(1);
+            enemyCompenent.TakeDamage(bulletDamage);
         }
     }
 }

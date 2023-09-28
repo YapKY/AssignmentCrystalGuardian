@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147006499588826072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.105, y: 0.322, z: 0}
+  m_LocalPosition: {x: 0.1, y: 0.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834343194885337877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.096, y: 0.413, z: 0}
+  m_LocalPosition: {x: 0.08, y: 0.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73,9 +73,10 @@ GameObject:
   - component: {fileID: 7810358463019903344}
   - component: {fileID: 6699064580111180151}
   - component: {fileID: 2288286351834981002}
-  - component: {fileID: 3415236419905999204}
+  - component: {fileID: 5796210830656881846}
   - component: {fileID: 7831242633862469845}
   - component: {fileID: 8038374845388974998}
+  - component: {fileID: 1458683085529938721}
   m_Layer: 0
   m_Name: RedWarrior3.0
   m_TagString: Hero
@@ -138,7 +139,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1596544877
-  m_SortingLayer: 4
+  m_SortingLayer: 8
   m_SortingOrder: 10
   m_Sprite: {fileID: -1344539451, guid: 87edbadb3b1258c42a957f67b3a09767, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -178,102 +179,51 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!82 &3415236419905999204
-AudioSource:
+--- !u!61 &5796210830656881846
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2627083856170998064}
   m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1ef2782f892f8994281783751a9fac81, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
+    m_Bits: 0
+  m_ExcludeLayers:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.67, y: 0.93}
+    newSize: {x: 0.46, y: 0.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.67, y: 0.93}
+  m_EdgeRadius: 0
 --- !u!114 &7831242633862469845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2734d90460cfbd84c9b3b213aa2d8a43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   rb: {fileID: 2288286351834981002}
   cam: {fileID: 0}
 --- !u!114 &8038374845388974998
@@ -303,9 +252,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2795328041702071885}
   bulletPrefab: {fileID: 9206818941301577172, guid: c7bba7d6d21003a46ac0c575b2c7c8a3, type: 3}
-  razerShoot: {fileID: 3415236419905999204}
   bulletForce: 20
   attackspeed: 1
+--- !u!114 &1458683085529938721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2627083856170998064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a4eb4c210ae0440958067d1e8bdc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2812741747648451051
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,9 +277,10 @@ GameObject:
   - component: {fileID: 2138431282079813277}
   - component: {fileID: 9200156923331279405}
   - component: {fileID: 3905401980875635587}
-  - component: {fileID: 6084509228322899170}
+  - component: {fileID: 7458955462501416440}
   - component: {fileID: 599434219075332569}
   - component: {fileID: 8208217183562072754}
+  - component: {fileID: 484920453135071874}
   m_Layer: 0
   m_Name: RedWarrior2.0
   m_TagString: Hero
@@ -382,7 +343,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1596544877
-  m_SortingLayer: 4
+  m_SortingLayer: 8
   m_SortingOrder: 10
   m_Sprite: {fileID: -879360235, guid: 87edbadb3b1258c42a957f67b3a09767, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -420,104 +381,53 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
---- !u!82 &6084509228322899170
-AudioSource:
+--- !u!61 &7458955462501416440
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2812741747648451051}
   m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1ef2782f892f8994281783751a9fac81, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
+    m_Bits: 0
+  m_ExcludeLayers:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.57, y: 0.77}
+    newSize: {x: 0.46, y: 0.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.57, y: 0.77}
+  m_EdgeRadius: 0
 --- !u!114 &599434219075332569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,7 +440,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2734d90460cfbd84c9b3b213aa2d8a43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   rb: {fileID: 3905401980875635587}
   cam: {fileID: 0}
 --- !u!114 &8208217183562072754
@@ -547,9 +456,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2306241791000461148}
   bulletPrefab: {fileID: 2261995756635264344, guid: f35f0b5a4472dd041b5adaf26aaeb936, type: 3}
-  razerShoot: {fileID: 6084509228322899170}
   bulletForce: 20
   attackspeed: 1
+--- !u!114 &484920453135071874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2812741747648451051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a4eb4c210ae0440958067d1e8bdc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3034310646993915346
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3034310646993915346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.171, y: 0.481, z: 0}
+  m_LocalPosition: {x: 0.17, y: 0.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -592,9 +512,10 @@ GameObject:
   - component: {fileID: 8395215149552228707}
   - component: {fileID: 9144396929248651284}
   - component: {fileID: 384630468954110368}
-  - component: {fileID: 1864978432454390216}
+  - component: {fileID: 6345339387564266769}
   - component: {fileID: 4969187994959051747}
   - component: {fileID: 7666460970390076704}
+  - component: {fileID: 4238112429470734777}
   m_Layer: 0
   m_Name: RedWarrior1.0
   m_TagString: Hero
@@ -657,7 +578,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1596544877
-  m_SortingLayer: 4
+  m_SortingLayer: 8
   m_SortingOrder: 10
   m_Sprite: {fileID: 495449079, guid: 87edbadb3b1258c42a957f67b3a09767, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -697,102 +618,51 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!82 &1864978432454390216
-AudioSource:
+--- !u!61 &6345339387564266769
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5245835562815620428}
   m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1ef2782f892f8994281783751a9fac81, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
+    m_Bits: 0
+  m_ExcludeLayers:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.46, y: 0.6}
+    newSize: {x: 0.46, y: 0.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.46, y: 0.6}
+  m_EdgeRadius: 0
 --- !u!114 &4969187994959051747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,7 +675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2734d90460cfbd84c9b3b213aa2d8a43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   rb: {fileID: 384630468954110368}
   cam: {fileID: 0}
 --- !u!114 &7666460970390076704
@@ -822,9 +691,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1527329153259895137}
   bulletPrefab: {fileID: 670214093798376140, guid: 9de431445cdd4e8438a32678a1ce23ba, type: 3}
-  razerShoot: {fileID: 1864978432454390216}
   bulletForce: 20
   attackspeed: 1
+--- !u!114 &4238112429470734777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5245835562815620428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a4eb4c210ae0440958067d1e8bdc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7655601613273044947
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +781,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1596544877
-  m_SortingLayer: 4
+  m_SortingLayer: 8
   m_SortingOrder: 10
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -923,7 +803,7 @@ AudioSource:
   m_GameObject: {fileID: 7655601613273044947}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5726784256045499952, guid: f67f5843246866f46be6be91795510e4, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3b14d49edfa7282498bf259166bdab8a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1031,3 +911,4 @@ MonoBehaviour:
   requiredExp: 1000
   frontExpBar: {fileID: 0}
   backExpBar: {fileID: 0}
+  levelText: {fileID: 0}

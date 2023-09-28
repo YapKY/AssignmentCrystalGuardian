@@ -10,12 +10,8 @@ public class Enemy1Right : MonoBehaviour
     [Header("EnemyAttributes")]
     [SerializeField] private float moveSpeed = 2f;
 
-    CrystalHealthBar hp;
-    float damage = 10f;
-
-
     private Transform targetPoint;
-    private int movePointCount= 0;
+    private int movePointCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -27,17 +23,11 @@ public class Enemy1Right : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector2.Distance(targetPoint.position,transform.position) <= 0.1f)
+        if (Vector2.Distance(targetPoint.position, transform.position) <= 0.1f)
         {
             movePointCount++;
 
-            if (movePointCount == EnemyManager.main.point.Length)
-            {
-                EnemySpawner.onEnemyKilledOrDestroy.Invoke();
-                Destroy(gameObject);
-                return;
-            }
-            else
+            if (movePointCount != EnemyManager.main.point.Length)
             {
                 targetPoint = EnemyManager.main.point[movePointCount];
             }

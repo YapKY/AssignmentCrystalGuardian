@@ -6,7 +6,6 @@ public class Enemy1Left : MonoBehaviour
 {
     [Header("EnemyPhysicsElement")]
     [SerializeField] private Rigidbody2D rb;
-    CrystalHealthBar healthBar;
 
     [Header("EnemyAttributes")]
     [SerializeField] private float moveSpeed = 2f;
@@ -28,13 +27,7 @@ public class Enemy1Left : MonoBehaviour
         {
             movePointCount++;
 
-            if (movePointCount == EnemyManager.main.pointStraightLeft.Length)
-            {
-                EnemySpawner.onEnemyKilledOrDestroy.Invoke();
-                Destroy(gameObject);
-                return;
-            }
-            else
+            if (movePointCount != EnemyManager.main.pointStraightLeft.Length)
             {
                 targetPoint = EnemyManager.main.pointStraightLeft[movePointCount];
             }
