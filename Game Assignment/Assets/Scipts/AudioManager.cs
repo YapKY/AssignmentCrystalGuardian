@@ -4,6 +4,8 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -23,6 +25,17 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    //private void Update()
+    //{
+    //    if (SceneManager.GetActiveScene().name == "NewGame")
+    //    {
+    //        musicSource.Stop();
+    //    }
+    //    else
+    //    {
+    //        NextScenes.next.PlaySoundMusic();
+    //    }
+    //}
 
     private void Start()
     {
