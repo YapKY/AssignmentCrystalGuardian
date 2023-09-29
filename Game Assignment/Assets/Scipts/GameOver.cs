@@ -32,6 +32,8 @@ public class GameOver : MonoBehaviour
 
     public void ExitButton()
     {
+        TimerCounter.timeLimit = 300;
+        EnemyKillCount.countKill = 0;
         SceneManager.LoadScene("Main Menu");
     }
 }

@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class NextScenes : MonoBehaviour
 {
-    //public static NextScenes next;
-    //AudioManager manager;
-    //public void PlaySoundMusic()
-    //{
-    //    manager.musicSource.Play();
-    //}
+    public static NextScenes next;
+    AudioManager manager;
+    public void PlaySoundMusic()
+    {
+        manager.musicSource.Play();
+    }
 }

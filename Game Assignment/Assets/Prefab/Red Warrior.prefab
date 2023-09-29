@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2288286351834981002}
-  cam: {fileID: 0}
+  cam: {fileID: 7012657163174809896, guid: f9baf7598cd34b749adc5385e855656d, type: 3}
 --- !u!114 &8038374845388974998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3905401980875635587}
-  cam: {fileID: 0}
+  cam: {fileID: 7012657163174809896, guid: f9baf7598cd34b749adc5385e855656d, type: 3}
 --- !u!114 &8208217183562072754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 384630468954110368}
-  cam: {fileID: 0}
+  cam: {fileID: 7012657163174809896, guid: f9baf7598cd34b749adc5385e855656d, type: 3}
 --- !u!114 &7666460970390076704
 MonoBehaviour:
   m_ObjectHideFlags: 0

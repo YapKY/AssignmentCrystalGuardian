@@ -25,17 +25,17 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    //private void Update()
-    //{
-    //    if (SceneManager.GetActiveScene().name == "NewGame")
-    //    {
-    //        musicSource.Stop();
-    //    }
-    //    else
-    //    {
-    //        NextScenes.next.PlaySoundMusic();
-    //    }
-    //}
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "NewGame")
+        {
+            musicSource.Stop();
+        }
+        else
+        {
+            NextScenes.next.PlaySoundMusic();
+        }
+    }
 
     private void Start()
     {

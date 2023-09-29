@@ -24,16 +24,20 @@ public class PlayerManager : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1;
-        pauseMenuScreen.SetActive(false); ;
+        pauseMenuScreen.SetActive(false);
     }
     public void GoToMenu()
     {
         Time.timeScale = 1;
+        TimerCounter.timeLimit = 300;
+        EnemyKillCount.countKill = 0;
         SceneManager.LoadScene("Main Menu");
     }
     public void Restart()
     {
         Time.timeScale = 1;
+        TimerCounter.timeLimit = 300;
+        EnemyKillCount.countKill = 0;
         SceneManager.LoadScene("NewGame");
     }
 }
