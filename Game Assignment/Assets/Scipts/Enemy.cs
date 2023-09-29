@@ -6,21 +6,13 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float health, maxHealth = 3f;
 
-    float expAmount = 500;
+    float expAmount = 100;
     float damage = 10f;
-    PlayerLevel levelSystem;
-
 
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 

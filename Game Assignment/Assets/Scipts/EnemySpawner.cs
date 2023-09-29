@@ -10,9 +10,9 @@ public class EnemySpawner : MonoBehaviour
     [Header("Enemy Number")]
     [SerializeField] private GameObject[] enemys;
     [SerializeField] private int baseEnemies = 5;
-    [SerializeField] private float enemiesPersecond = 1f;
-    [SerializeField] private float timeBetweenWaves = 8f;
-    [SerializeField] private float difficultyFactor = 0.75f;
+    [SerializeField] private float enemiesPersecond = 1.5f;
+    [SerializeField] private float timeBetweenWaves = 5f;
+    [SerializeField] private float difficultyFactor = 0.5f;
 
     private int currentWave = 1;
     private float timeSinceLastSpawn;
@@ -99,7 +99,6 @@ public class EnemySpawner : MonoBehaviour
         {
             Debug.Log("Game End");
         }
-
     }
 
     private IEnumerator StartWave()

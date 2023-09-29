@@ -8,7 +8,7 @@ public class Enemy2Left : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     [Header("BirdRobotAttributes")]
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 3f;
 
     private Transform targetPoint;
     private int movePointCount = 0;

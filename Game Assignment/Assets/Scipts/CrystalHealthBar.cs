@@ -34,6 +34,12 @@ public class CrystalHealthBar : MonoBehaviour
         {
             hpText.color = Color.red;
             Destroy(gameObject, 5f);
+            GameOver.isGameOver = true;
+        }
+
+        if(TimerCounter.timeLimit == 0 && crystalHp != 0)
+        {
+            Victory.isVictory = true;
         }
     }
 

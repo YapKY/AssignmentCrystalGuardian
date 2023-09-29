@@ -13,27 +13,14 @@ public class AudioManager : MonoBehaviour
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
 
-    private void Awake()
+    void Update()
     {
-        if (Instance == null)
+        if (SceneManager.GetActiveScene().name == "NewGame")
+            musicSource.Pause();
+        else
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-    private void Update()
-    {
-        if (SceneManager.GetActiveScene().name == "NewGame")
-        {
-            musicSource.Stop();
-        }
-        else
-        {
-            NextScenes.next.PlaySoundMusic();
         }
     }
 

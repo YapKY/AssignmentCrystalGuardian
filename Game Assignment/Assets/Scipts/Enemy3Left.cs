@@ -9,7 +9,7 @@ public class Enemy3Left : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     [Header("FishRobotAttributes")]
-    [SerializeField] private float moveSpeed = 3f;
+    [SerializeField] private float moveSpeed = 1f;
 
 
     private Transform targetPoint;

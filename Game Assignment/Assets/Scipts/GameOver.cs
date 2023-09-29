@@ -25,6 +25,7 @@ public class GameOver : MonoBehaviour
 
     public void RestartButton()
     {
+        ExpBar.level = 1;
         TimerCounter.timeLimit = 300;
         EnemyKillCount.countKill = 0;
         SceneManager.LoadScene("NewGame");
@@ -32,6 +33,7 @@ public class GameOver : MonoBehaviour
 
     public void ExitButton()
     {
+        ExpBar.level = 1;
         TimerCounter.timeLimit = 300;
         EnemyKillCount.countKill = 0;
         SceneManager.LoadScene("Main Menu");

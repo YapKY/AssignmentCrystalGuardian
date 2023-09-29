@@ -8,9 +8,9 @@ public class ExpBar : MonoBehaviour
 {
     [SerializeField] private AudioSource levelUpSound;
     [Header("Level")]
-    public static int level = 1;
-    public float currentExp;
-    public float requiredExp;
+    public static int level;
+    private float currentExp;
+    private float requiredExp;
     float newExp = 0;
     private float lerpTimer;
     private float delayTimer;
@@ -19,12 +19,12 @@ public class ExpBar : MonoBehaviour
     public Image backExpBar;
     public TextMeshProUGUI levelText;
 
-    PlayerLevel changeMode;
-
     // Start is called before the first frame update
     void Start()
     {
-
+        currentExp = 0;
+        requiredExp = 1000;
+        level = 1;
         frontExpBar.fillAmount = currentExp / requiredExp;
         backExpBar.fillAmount = currentExp / requiredExp;
 
