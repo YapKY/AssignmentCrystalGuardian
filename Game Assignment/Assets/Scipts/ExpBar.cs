@@ -1,19 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class LevelSystem : MonoBehaviour
+public class ExpBar : MonoBehaviour
 {
-    [Header("Hero Sprite")]
-    public GameObject avatar1;
-    public GameObject avatar2;
-    public GameObject avatar3;
     [SerializeField] private AudioSource levelUpSound;
     [Header("Level")]
-    public int level;
+    public static int level = 1;
     public float currentExp;
     public float requiredExp;
     float newExp = 0;
@@ -22,15 +17,13 @@ public class LevelSystem : MonoBehaviour
     [Header("UI")]
     public Image frontExpBar;
     public Image backExpBar;
-
     public TextMeshProUGUI levelText;
+
+    PlayerLevel changeMode;
 
     // Start is called before the first frame update
     void Start()
     {
-        avatar1.gameObject.SetActive(true);
-        avatar2.gameObject.SetActive(false);
-        avatar3.gameObject.SetActive(false);
 
         frontExpBar.fillAmount = currentExp / requiredExp;
         backExpBar.fillAmount = currentExp / requiredExp;
@@ -116,35 +109,8 @@ public class LevelSystem : MonoBehaviour
         currentExp = Mathf.RoundToInt(currentExp - requiredExp);
         requiredExp += (float)1500;
         levelText.text = "LV " + level;
-        switchAvatar(level);
+        
     }
 
-    public void switchAvatar(int level)
-    {
-        switch (level)
-        {
-            case 2:
-                {
-                    avatar1.gameObject.SetActive(false);
-                    avatar2.gameObject.SetActive(true);
-                    avatar3.gameObject.SetActive(false);
-                    Bullet.bullletDamageUp();
-                    PlayerMovement.moveSpeed += 2;
-                    avatar2.transform.position = avatar1.transform.position;
-                }
-                break;
-            case 3:
-                {
-                    avatar1.gameObject.SetActive(false);
-                    avatar2.gameObject.SetActive(false);
-                    avatar3.gameObject.SetActive(true);
-                    Bullet.bullletDamageUp();
-                    PlayerMovement.moveSpeed += 2;
-                    avatar3.transform.position = avatar2.transform.position;
-                }
-                break;
-        }
-
-    }
 
 }

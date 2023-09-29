@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 
     float expAmount = 500;
     float damage = 10f;
-    LevelSystem levelSystem;
+    PlayerLevel levelSystem;
 
 
     // Start is called before the first frame update
