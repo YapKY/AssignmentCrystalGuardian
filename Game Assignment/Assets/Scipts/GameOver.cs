@@ -7,10 +7,11 @@ public class GameOver : MonoBehaviour
 {
     public static bool isGameOver;
     public GameObject gameOverScreenObject;
-
+    MenuSoundManager audioManager;
 
     public void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MenuSoundManager>();
         isGameOver = false;
         gameOverScreenObject.gameObject.SetActive(false);
     }
@@ -19,6 +20,7 @@ public class GameOver : MonoBehaviour
     {
         if (isGameOver)
         {
+            audioManager.PlaySFX(audioManager.gameOver);
             gameOverScreenObject.gameObject.SetActive(true);
         }
     }

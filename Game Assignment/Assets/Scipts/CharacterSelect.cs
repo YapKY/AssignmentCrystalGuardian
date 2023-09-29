@@ -58,12 +58,12 @@ public class CharacterSelect : MonoBehaviour
 
     public void UpdatedUI()
     {
-        coinsText.text = "Price: " + PlayerPrefs.GetInt("NumberOfCoins", 0);
+        coinsText.text = "Coins: " + PlayerPrefs.GetInt("NumberOfCoins", 0);
         if (characters[selectedCharacter].isUnlocked == true)
             unlockButton.gameObject.SetActive(false);
         else
         {
-            unlockButton.GetComponentInChildren<TextMeshProUGUI>().text = "Price: " + characters[selectedCharacter].price;
+            unlockButton.GetComponentInChildren<TextMeshProUGUI>().text = "Coins: " + characters[selectedCharacter].price;
             if (PlayerPrefs.GetInt("NumberOfCoins", 0) < characters[selectedCharacter].price)
             {
                 unlockButton.gameObject.SetActive(true);

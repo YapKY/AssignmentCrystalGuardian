@@ -6,7 +6,6 @@ using TMPro;
 
 public class ExpBar : MonoBehaviour
 {
-    [SerializeField] private AudioSource levelUpSound;
     [Header("Level")]
     public static int level;
     private float currentExp;
@@ -18,7 +17,12 @@ public class ExpBar : MonoBehaviour
     public Image frontExpBar;
     public Image backExpBar;
     public TextMeshProUGUI levelText;
+    MenuSoundManager audioManager;
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MenuSoundManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -103,13 +107,12 @@ public class ExpBar : MonoBehaviour
     public void LevelUp()
     {
         level++;
-        levelUpSound.Play();
+        audioManager.PlaySFX(audioManager.levelUp);
         frontExpBar.fillAmount = 0f;
         backExpBar.fillAmount = 0f;
         currentExp = Mathf.RoundToInt(currentExp - requiredExp);
         requiredExp += (float)1500;
         levelText.text = "LV " + level;
-        
     }
 
 

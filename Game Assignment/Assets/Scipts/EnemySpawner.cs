@@ -22,10 +22,12 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Enemy Event")]
     public static UnityEvent onEnemyKilledOrDestroy = new UnityEvent();
+    MenuSoundManager audioManager;
 
     private void Awake()
     {
         onEnemyKilledOrDestroy.AddListener(enemyDestroyedOrKilled);
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MenuSoundManager>();
     }
 
     private void Start()
@@ -57,6 +59,7 @@ public class EnemySpawner : MonoBehaviour
         if (enemiesAlive != 0)
         {
             enemiesAlive--;
+            audioManager.PlaySFX(audioManager.enemyDeath);
         }
     }
 
@@ -64,6 +67,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if (TimerCounter.timeLimit > 180 && TimerCounter.timeLimit <= 300)
         {
+            audioManager.PlaySFX(audioManager.enemySpawn);
             GameObject enemyToSpawn = enemys[0];
             GameObject enemyToSpawnRightUp = enemys[1];
             Instantiate(enemyToSpawn, EnemyManager.main.startingPoint[0].position, Quaternion.identity);
@@ -71,6 +75,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (TimerCounter.timeLimit <= 180 && TimerCounter.timeLimit > 60)
         {
+            audioManager.PlaySFX(audioManager.enemySpawn);
             GameObject enemyToSpawn = enemys[0];
             GameObject enemyToSpawnRightUp = enemys[1];
             GameObject enemyToSpawnRightDown = enemys[2];
@@ -82,6 +87,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (TimerCounter.timeLimit >= 0 && TimerCounter.timeLimit <= 60)
         {
+            audioManager.PlaySFX(audioManager.enemySpawn);
             GameObject enemyToSpawn = enemys[0];
             GameObject enemyToSpawnRightUp = enemys[1];
             GameObject enemyToSpawnRightDown = enemys[2];

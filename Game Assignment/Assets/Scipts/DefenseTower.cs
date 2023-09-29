@@ -10,7 +10,6 @@ public class DefenseTower : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject towerBulletStore;
     [SerializeField] private Transform towerFirePoint;
-    [SerializeField] private AudioSource towerShootSound;
     
 
     [Header("Tower Attribute")]
@@ -21,10 +20,11 @@ public class DefenseTower : MonoBehaviour
     private Transform targetE;
     private float timeFire;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    MenuSoundManager audioManager;
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MenuSoundManager>();
     }
 
     // Update is called once per frame
@@ -58,7 +58,7 @@ public class DefenseTower : MonoBehaviour
     {
         GameObject bullet = Instantiate(towerBulletStore, towerFirePoint.position, towerFirePoint.rotation);
         towerBullet bullet1 = bullet.GetComponent<towerBullet>();
-        towerShootSound.Play();
+        audioManager.PlaySFX(audioManager.towerShoot);
         bullet1.setTarget(targetE);
     }
 

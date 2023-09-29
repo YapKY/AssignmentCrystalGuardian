@@ -8,4 +8,8 @@ public class SoundSFX : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX("Click Menu");
     }
+    public void PlayPurchasedSound()
+    {
+        AudioManager.Instance.PlaySFX("Cash Sound");
+    }
 }

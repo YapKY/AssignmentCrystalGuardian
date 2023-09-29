@@ -434,7 +434,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33324336}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3b14d49edfa7282498bf259166bdab8a, type: 3}
@@ -535,7 +535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3ba6f8de6bab9468a72f37054ade01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelUpSound: {fileID: 33324340}
   frontExpBar: {fileID: 2048729456}
   backExpBar: {fileID: 8432964088552006636}
   levelText: {fileID: 1861054747}
@@ -3399,6 +3398,11 @@ MonoBehaviour:
   SFXSource: {fileID: 971833973}
   shoot: {fileID: 8300000, guid: 1ef2782f892f8994281783751a9fac81, type: 3}
   levelUp: {fileID: 8300000, guid: 3b14d49edfa7282498bf259166bdab8a, type: 3}
+  enemySpawn: {fileID: 8300000, guid: 8ea71a6fa22709e439c4914b175c32e7, type: 3}
+  enemyDeath: {fileID: 8300000, guid: 612e2f44c93a14742a3f7f58579252e0, type: 3}
+  gameOver: {fileID: 8300000, guid: 2e96693317b2c3d4bbdcf4298284ac8c, type: 3}
+  victory: {fileID: 8300000, guid: ee33f66846e3bba4fa87f3ef640965c0, type: 3}
+  towerShoot: {fileID: 8300000, guid: 2e86c3eff53561f4dbfe01b150e92d24, type: 3}
 --- !u!1 &756634638
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,7 +3661,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8403021371670329363, guid: c3220992f582d5e4eacbbb3c5831c444, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -7019,7 +7024,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.54
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8403021371670329363, guid: c3220992f582d5e4eacbbb3c5831c444, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -10139,10 +10145,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7602820640921647685, guid: c3220992f582d5e4eacbbb3c5831c444, type: 3}
+      propertyPath: towerShootSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602820640921647685, guid: c3220992f582d5e4eacbbb3c5831c444, type: 3}
       propertyPath: towerBulletStore
       value: 
       objectReference: {fileID: 817574368771780246, guid: 77bb23ff1f076c44f9d83ce981d344ed, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8403021371670329363, guid: c3220992f582d5e4eacbbb3c5831c444, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -10822,7 +10833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1920514641
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12445,7 +12456,8 @@ PrefabInstance:
       propertyPath: towerBulletStore
       value: 
       objectReference: {fileID: 817574368771780246, guid: 77bb23ff1f076c44f9d83ce981d344ed, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8403021371670329363, guid: c3220992f582d5e4eacbbb3c5831c444, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
