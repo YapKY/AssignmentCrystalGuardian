@@ -12,13 +12,13 @@ public class EnemyKillCount : MonoBehaviour
     public TextMeshProUGUI killCountText;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         killCountText.text = "" + killUpdate;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (killUpdate < countKill)
         {

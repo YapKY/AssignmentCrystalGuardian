@@ -15,7 +15,7 @@ public class CrystalHealthBar : MonoBehaviour
     public TextMeshProUGUI hpText;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         crystalHp = crystalmaxHp;
         hpText.text = crystalHp + "/" + crystalmaxHp;
@@ -26,7 +26,7 @@ public class CrystalHealthBar : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         crystalHp = Mathf.Clamp(crystalHp, 0, crystalmaxHp); //to makesure the Crystal Hp is from 0 to 100 only
         UpdateCrystalHPBar();

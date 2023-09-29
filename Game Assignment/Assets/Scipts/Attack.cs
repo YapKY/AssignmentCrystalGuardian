@@ -21,7 +21,7 @@ public class Attack : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
@@ -29,7 +29,7 @@ public class Attack : MonoBehaviour
         }
     }
 
-    void shooting()
+    private void shooting()
     {
         //create a bullet at fire
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);

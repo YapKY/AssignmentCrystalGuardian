@@ -14,14 +14,14 @@ public class Enemy1Right : MonoBehaviour
     private int movePointCount = 0;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         targetPoint = EnemyManager.main.point[movePointCount];
 
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Vector2.Distance(targetPoint.position, transform.position) <= 0.1f)
         {

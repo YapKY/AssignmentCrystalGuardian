@@ -9,7 +9,7 @@ public class TimerCounter : MonoBehaviour
     public static float timeLimit = 300;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (timeLimit > 0)
         {

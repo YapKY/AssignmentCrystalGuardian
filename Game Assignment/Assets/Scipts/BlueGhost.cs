@@ -11,7 +11,7 @@ public class BlueGhost : MonoBehaviour
     private int currentLevel = 1;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         avatar1.gameObject.SetActive(true);
         avatar2.gameObject.SetActive(false);
@@ -21,7 +21,7 @@ public class BlueGhost : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (ExpBar.level > currentLevel)
         {

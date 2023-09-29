@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float health, maxHealth = 3f;
+    [SerializeField] private float health, maxHealth = 3f;
 
-    float expAmount = 20;
-    float damage = 10f;
+    private float expAmount = 20;
+    private float damage = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         ExperienceManager.Instance.AddExperince(expAmount);
         EnemySpawner.onEnemyKilledOrDestroy.Invoke();
