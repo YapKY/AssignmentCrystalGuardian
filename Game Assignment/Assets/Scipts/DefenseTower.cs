@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 
 public class DefenseTower : MonoBehaviour
 {
@@ -86,10 +86,10 @@ public class DefenseTower : MonoBehaviour
         towerRotationPoint.rotation = Quaternion.RotateTowards(towerRotationPoint.rotation, targetRotation, rotatingSpeed * Time.deltaTime);
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        //draw a 2D circle
-        Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetRange);
-    }
+    //private void OnDrawGizmosSelected()
+    //{
+    //    //draw a 2D circle
+    //    Handles.color = Color.cyan;
+    //    Handles.DrawWireDisc(transform.position, transform.forward, targetRange);
+    //}
 }
