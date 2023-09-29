@@ -65,7 +65,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        if (TimerCounter.timeLimit > 180 && TimerCounter.timeLimit <= 300)
+        if (TimerCounter.timeLimit > 240 && TimerCounter.timeLimit <= 300)
         {
             audioManager.PlaySFX(audioManager.enemySpawn);
             GameObject enemyToSpawn = enemys[0];
@@ -73,7 +73,7 @@ public class EnemySpawner : MonoBehaviour
             Instantiate(enemyToSpawn, EnemyManager.main.startingPoint[0].position, Quaternion.identity);
             Instantiate(enemyToSpawnRightUp, EnemyManager.main.startingPoint[1].position, Quaternion.identity);
         }
-        else if (TimerCounter.timeLimit <= 180 && TimerCounter.timeLimit > 60)
+        else if (TimerCounter.timeLimit <= 240 && TimerCounter.timeLimit > 120)
         {
             audioManager.PlaySFX(audioManager.enemySpawn);
             GameObject enemyToSpawn = enemys[0];
@@ -85,7 +85,7 @@ public class EnemySpawner : MonoBehaviour
             Instantiate(enemyToSpawnRightDown, EnemyManager.main.startingPoint[0].position, Quaternion.identity);
             Instantiate(enemyToSpawnLeftUp, EnemyManager.main.startingPoint[1].position, Quaternion.identity);
         }
-        else if (TimerCounter.timeLimit >= 0 && TimerCounter.timeLimit <= 60)
+        else if (TimerCounter.timeLimit >= 0 && TimerCounter.timeLimit <= 120)
         {
             audioManager.PlaySFX(audioManager.enemySpawn);
             GameObject enemyToSpawn = enemys[0];
