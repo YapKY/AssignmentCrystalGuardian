@@ -29,6 +29,8 @@ public class PlayerManager : MonoBehaviour
     public void GoToMenu()
     {
         Time.timeScale = 1;
+        Bullet.bulletDamage = 1f;
+        ExpBar.level = 1;
         TimerCounter.timeLimit = 300;
         EnemyKillCount.countKill = 0;
         SceneManager.LoadScene("Main Menu");
@@ -36,6 +38,8 @@ public class PlayerManager : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1;
+        Bullet.bulletDamage = 1f;
+        ExpBar.level = 1;
         TimerCounter.timeLimit = 300;
         EnemyKillCount.countKill = 0;
         SceneManager.LoadScene("NewGame");

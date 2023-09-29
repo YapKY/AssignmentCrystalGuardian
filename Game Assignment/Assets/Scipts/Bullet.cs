@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject hitEffect;
-    public static float bulletDamage = 1;
+    public static float bulletDamage = 1f;
 
     // Update is called once per frame
     private void Update()

@@ -30,6 +30,7 @@ public class GameOver : MonoBehaviour
     public void RestartButton()
     {
         Time.timeScale = 1;
+        Bullet.bulletDamage = 1f;
         ExpBar.level = 1;
         TimerCounter.timeLimit = 300;
         EnemyKillCount.countKill = 0;
@@ -38,6 +39,7 @@ public class GameOver : MonoBehaviour
 
     public void ExitButton()
     {
+        Bullet.bulletDamage = 1f;
         ExpBar.level = 1;
         TimerCounter.timeLimit = 300;
         EnemyKillCount.countKill = 0;
