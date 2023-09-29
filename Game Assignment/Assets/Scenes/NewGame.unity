@@ -9403,10 +9403,10 @@ MonoBehaviour:
   - {fileID: 5033122920256035876, guid: 308cdf5a41bc59849847e7e0fe44da81, type: 3}
   - {fileID: 8665784559269936562, guid: d857aa27c1afb714d8400fc816dbf211, type: 3}
   - {fileID: 9032500694179061838, guid: 2e8df6c9909da18468d699790d5dcbc1, type: 3}
-  baseEnemies: 8
-  enemiesPersecond: 0.4
+  baseEnemies: 10
+  enemiesPersecond: 0.6
   timeBetweenWaves: 5
-  difficultyFactor: 0.5
+  difficultyFactor: 0.75
   enemiesAlive: 0
   enemyLeftSpawn: 0
 --- !u!114 &1722185752
