@@ -7,12 +7,17 @@ public class Attack : MonoBehaviour
     public Transform firePoint;     //place that the bullet come out
     public GameObject bulletPrefab; // the bullet prefab
     public float bulletForce = 20f;
-    public int attackspeed;
+    public static float attackspeed = 1f;
     MenuSoundManager audioManager;
 
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MenuSoundManager>();
+    }
+
+    private void Start()
+    {
+        attackspeed = 1f;
     }
 
     // Update is called once per frame

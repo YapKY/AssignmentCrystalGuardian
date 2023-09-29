@@ -11,6 +11,7 @@ public class Victory : MonoBehaviour
 
     public void Awake()
     {
+        Time.timeScale = 1;
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MenuSoundManager>();
         isVictory = false;
         gameOverScreenObject.gameObject.SetActive(false);
@@ -20,6 +21,7 @@ public class Victory : MonoBehaviour
     {
         if (isVictory)
         {
+            Time.timeScale = 0;
             audioManager.PlaySFX(audioManager.victory);
             gameOverScreenObject.gameObject.SetActive(true);
         }

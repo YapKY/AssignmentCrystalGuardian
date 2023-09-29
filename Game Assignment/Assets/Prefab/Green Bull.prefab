@@ -243,7 +243,6 @@ MonoBehaviour:
   firePoint: {fileID: 2795328041702071885}
   bulletPrefab: {fileID: 4993937524220571532, guid: db295f886151aa947820eb2a4b5913ca, type: 3}
   bulletForce: 20
-  attackspeed: 1
 --- !u!114 &1458683085529938721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,7 +436,6 @@ MonoBehaviour:
   firePoint: {fileID: 2306241791000461148}
   bulletPrefab: {fileID: 7968229399067361016, guid: 9bc74ee23fa6dfc439503c9645943908, type: 3}
   bulletForce: 20
-  attackspeed: 1
 --- !u!114 &484920453135071874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,7 +660,6 @@ MonoBehaviour:
   firePoint: {fileID: 1527329153259895137}
   bulletPrefab: {fileID: 7948289990444235913, guid: 4d4649a4d29d5864b9d5d0515ee6d400, type: 3}
   bulletForce: 20
-  attackspeed: 1
 --- !u!114 &4238112429470734777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,7 +682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3328301867436855407}
   - component: {fileID: 437429506303462622}
-  - component: {fileID: 3714970852855039855}
+  - component: {fileID: 6607144785345136814}
   m_Layer: 0
   m_Name: Green Bull
   m_TagString: Untagged
@@ -709,7 +706,7 @@ Transform:
   - {fileID: 2138431282079813277}
   - {fileID: 8395215149552228707}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &437429506303462622
 SpriteRenderer:
@@ -763,7 +760,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3714970852855039855
+--- !u!114 &6607144785345136814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -772,7 +769,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7655601613273044947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dcb560e9f1c35a41a80fe2fd299ef86, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f87b2e14857111429e16be173a9c9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   avatar1: {fileID: 5245835562815620428}

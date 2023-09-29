@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class PlayerLevel : MonoBehaviour
+public class RedWarrior : MonoBehaviour
 {
     [Header("Hero Sprite")]
     public GameObject avatar1;
@@ -19,6 +19,8 @@ public class PlayerLevel : MonoBehaviour
         avatar1.gameObject.SetActive(true);
         avatar2.gameObject.SetActive(false);
         avatar3.gameObject.SetActive(false);
+        PlayerMovement.moveSpeed = 5f;
+        Attack.attackspeed = 1;
     }
 
     // Update is called once per frame
@@ -41,8 +43,9 @@ public class PlayerLevel : MonoBehaviour
                     avatar1.gameObject.SetActive(false);
                     avatar2.gameObject.SetActive(true);
                     avatar3.gameObject.SetActive(false);
-                    Bullet.bullletDamageUp();
-                    PlayerMovement.moveSpeed += 2;
+                    Bullet.UpdateDamage();
+                    PlayerMovement.moveSpeed += 1f;
+                    Attack.attackspeed += 0.5f;
                     avatar2.transform.position = avatar1.transform.position;
                 }
                 break;
@@ -51,8 +54,9 @@ public class PlayerLevel : MonoBehaviour
                     avatar1.gameObject.SetActive(false);
                     avatar2.gameObject.SetActive(false);
                     avatar3.gameObject.SetActive(true);
-                    Bullet.bullletDamageUp();
-                    PlayerMovement.moveSpeed += 2;
+                    Bullet.UpdateDamage();
+                    PlayerMovement.moveSpeed += 1f;
+                    Attack.attackspeed += 0.5f;
                     avatar3.transform.position = avatar2.transform.position;
                 }
                 break;

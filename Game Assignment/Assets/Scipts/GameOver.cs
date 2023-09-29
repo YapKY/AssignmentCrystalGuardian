@@ -11,6 +11,7 @@ public class GameOver : MonoBehaviour
 
     public void Awake()
     {
+        Time.timeScale = 1;
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MenuSoundManager>();
         isGameOver = false;
         gameOverScreenObject.gameObject.SetActive(false);
@@ -20,6 +21,7 @@ public class GameOver : MonoBehaviour
     {
         if (isGameOver)
         {
+            Time.timeScale = 0;
             audioManager.PlaySFX(audioManager.gameOver);
             gameOverScreenObject.gameObject.SetActive(true);
         }
@@ -27,6 +29,7 @@ public class GameOver : MonoBehaviour
 
     public void RestartButton()
     {
+        Time.timeScale = 1;
         ExpBar.level = 1;
         TimerCounter.timeLimit = 300;
         EnemyKillCount.countKill = 0;

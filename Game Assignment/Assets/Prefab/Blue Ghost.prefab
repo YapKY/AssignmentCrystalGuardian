@@ -181,7 +181,6 @@ MonoBehaviour:
   firePoint: {fileID: 4186650336318368323}
   bulletPrefab: {fileID: 3261653605378754830, guid: 4f95d6be2565ab04e8b3afd44aa52de5, type: 3}
   bulletForce: 20
-  attackspeed: 1
 --- !u!114 &7296421603164972506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,7 +405,6 @@ MonoBehaviour:
   firePoint: {fileID: 6328283002399072959}
   bulletPrefab: {fileID: 6817241350630032121, guid: fb30314fbf84579469fa3f4ff9d61ee1, type: 3}
   bulletForce: 20
-  attackspeed: 1
 --- !u!114 &7814330917669945360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,7 +598,6 @@ MonoBehaviour:
   firePoint: {fileID: 6670511806939290341}
   bulletPrefab: {fileID: 2233615759986388578, guid: 99feb04fd5e8789428d193bc7b0d0cee, type: 3}
   bulletForce: 20
-  attackspeed: 1
 --- !u!114 &638514240984668553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,7 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6583217038242058266}
   - component: {fileID: 2842488781276629637}
-  - component: {fileID: 4769007448780871618}
+  - component: {fileID: 372774760203027574}
   m_Layer: 0
   m_Name: Blue Ghost
   m_TagString: Untagged
@@ -647,7 +644,7 @@ Transform:
   - {fileID: 599639386223222621}
   - {fileID: 1054107031154607625}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2842488781276629637
 SpriteRenderer:
@@ -701,7 +698,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4769007448780871618
+--- !u!114 &372774760203027574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -710,7 +707,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6925757151815621997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dcb560e9f1c35a41a80fe2fd299ef86, type: 3}
+  m_Script: {fileID: 11500000, guid: edbf57bbb56ff9947a971ce72478e4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   avatar1: {fileID: 3369061219654769354}

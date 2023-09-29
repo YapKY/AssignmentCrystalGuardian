@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float health, maxHealth = 3f;
 
-    float expAmount = 100;
+    float expAmount = 20;
     float damage = 10f;
 
     // Start is called before the first frame update

@@ -5,12 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject hitEffect;
-    public static int bulletDamage = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public static float bulletDamage = 1;
 
     // Update is called once per frame
     void Update()
@@ -18,7 +13,7 @@ public class Bullet : MonoBehaviour
         Destroy(this.gameObject, 3f);
     }
 
-    public static void bullletDamageUp()
+    public static void UpdateDamage()
     {
         bulletDamage++;
     }
